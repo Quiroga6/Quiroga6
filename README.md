@@ -32,7 +32,7 @@ Para repositorios ya existentes, es necesario usar el comando `git init` dentro 
 
 ## Los 3 estados de Git
 
-![states-git.png](Clase%201%207bdc9b86e69f41cd8966d400f19ddc11/states-git.png)
+[![states-git.png](https://i.postimg.cc/85N68H3d/states-git.png)](https://postimg.cc/PLVxYmdN)
 
 ### Modified
 

@@ -128,3 +128,17 @@ git branch mi-primera-rama
 # Cambiamos a la rama mi-primera-rama
 git switch mi-primera-rama
 `````
+Es posible hacer los dos pasos en uno usando el comando:
+
+- `git switch -c mi-primera-rama` Esto creara la rama y te llevara a ella con un solo comando.
+- `git checkout -b mi-primera-rama` Esto tambien creara la rama y te llevara a ella con un solo comando.
+
+## Fusionar ramas
+
+Las bifurcaciones de código que hemos creado en forma de ramas tendrán dos destinos: acabar en el olvido para no terminar en ningún lado o ser fusionada en otra rama
+
+Cuando hablamos de fusión nos referimos que los cambios que hemos realizado en la rama se integran en otra rama, de forma que el código que habíamos generado en la nueva rama se asimila en otra.
+
+### Fusinando ramas
+
+Empleamos el comando `git merge` para incorporar los cambios de una rama a la rama en la que nos encontramos en ese momento.

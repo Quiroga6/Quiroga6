@@ -1,6 +1,5 @@
+# Repositorio1
 # Clase 1
-
-Estado: Sin empezar
 
 # Introducción a Git
 
@@ -14,18 +13,30 @@ Esto te permite tener un historial de todos los cambios producidos en sus ficher
 - Rendimiento, solo se guarda lo necesario
 - Seguridad, conserva toda acción
 - Flexibilidad, no es necesario un desarrollo lineal
+El control de versiones es crucial para el desarrollo de software, ya que permite guardar cambios de forma segura y flexible, conservando todo el historial de acciones realizadas.
 
 # ¿Qué es Git?
 
 Git al ser un sistema distribuido, aloja una copia completa del repositorio en cada maquina local que esta trabajando en el código. Además, puedes tener uno o varios repositorios remotas para sincronizarlos.
+[![imagen.jpg](https://i.postimg.cc/6QX2nn3s/imagen.jpg)](https://postimg.cc/yDL8zJcn)
 
-![Concept image representing network, networking, connection, social networks, communications.jpeg](Clase%201%207bdc9b86e69f41cd8966d400f19ddc11/e48d1253-bed3-4e73-a438-594432b704d5.png)
+## Iniciar un proyecto en Git
 
-## ¿Qué es un Repositorio?
+Para crear un repositorio Local se puede usar el comando `git init` e indicar el nombre del proyecto. Creara una carpeta configurada y vacia con el nombre que le has indicado.
+- `git init nuevo-proyecto`
+- `cd nuevo-proyecto`
 
-Un pilar de Git son los repositorios
-Un repositorio es una carpeta en la que se almacenan las diferentes versiones de los ficheros de un proyecto y el histórico de los cambios que se han realizado en ellos.
-Los repositorios pueden ser locales.
+Para repositorios ya existentes, es necesario usar el comando `git init` dentro de la raíz del directorio del proyecto.
+- `cd <directorio del proyecto>`
+- `git init`
+# States y commits
+
+## Los 3 estados de Git
+
+### Modified
+
+El archivo ha sido creado, eliminado o contiene cambios que no han sido marcados como confirmados.
+
 
 ### Comandos mencionados
 

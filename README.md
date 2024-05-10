@@ -33,9 +33,64 @@ Para repositorios ya existentes, es necesario usar el comando `git init` dentro 
 
 ## Los 3 estados de Git
 
+![states-git.png](Clase%201%207bdc9b86e69f41cd8966d400f19ddc11/states-git.png)
+
 ### Modified
 
 El archivo ha sido creado, eliminado o contiene cambios que no han sido marcados como confirmados.
+
+- `git status`: Para ver el estado de los archivos en el repositorio.
+
+### Staged
+
+El archivo ha sido marcado como preparado para ser confirmado en el repositorio local.
+
+- `git add <archivo>`: Para pasar un archivo al área de staging.
+
+### Commited
+
+El archivo se encuentra grabado en el repositorio local. Esta acción recibe el nombre de *commit*
+
+- `git commit -m "mensaje"`: Para realizar un commit con un mensaje descriptivo.
+
+Un commit en Git es como guardar una partida en un videojuego, permitiendo restaurar cambios anteriores. Es fundamental para registrar cambios en un repositorio y se realiza con 'git commit'.
+El mensaje de un commit es crucial para documentar los cambios realizados y se puede realizar a través de 'git commit' en Git.
+
+- `git restore --staged <archivo>` Se usa para quitar los cambios que has agregado al área de preparación, pero manteniendo esos cambios en tu directorio de trabajo.
+
+## ¿Qué es un commit?
+
+Es como guardar partida en un videojuego, tienes tu punto de restauración si te equivocas.
+
+### ¿Cómo hago un commit?
+
+Para guardar los cambios en el área de staging, puedes hacer un commit con el siguiente comando
+
+- `git commit`
+
+Creará un nuevo commit en tu repositorio y añadirá una referencia al commit en la rama en la que estas trabajando.
+Para añadir directamente un mensaje sin abrir el editor, se usa el parámetro `-m` o `--message:` 
+
+- `git commit -m "mensaje"`
+
+El mensaje especifico se usará como titulo del commit para describir los cambios realizados.
+
+### Hacer commits con múltiples líneas de mensajes
+
+`git commit -m "mensaje" -m "mas mensaje"`  
+
+- El primer  **`-m "mensaje"`** se usa para proporcionar el mensaje principal del commit.
+- El segundo  **`-m "mas mensaje"`** se usa para proporcionar un mensaje adicional, que puede ser una explicación más detallada del cambio realizado.
+
+### git commit —ammend
+
+Se usa para modificar el commit más reciente en tu historial de Git, para corregir el mensaje del commit o agregar cambios olvidados al último commit sin crear uno nuevo.
+
+- `git commit --ammend - m "nuevo mensaje"`
+
+## ¿Qué es el HEAD?
+
+ "HEAD" en Git es simplemente un puntero que apunta al commit actual en el que te encuentras. Es como tu posición actual en la historia de tu proyecto. "HEAD" es un punto de referencia que indica dónde te encuentras en la historia de tu proyecto en cualquier momento dado.
 
 
 ### Comandos mencionados

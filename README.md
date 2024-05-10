@@ -104,3 +104,27 @@ Comandos de Git de la clase 1 varios comandos de Git, entre ellos:
 - `git config --global user.name "Your name"` Configurar nombre de usuario
 - `git config --global user.email "email@example.com"` Configurar un email
 - `git restore --staged <archivo>` Se usa para quitar los cambios que has agregado al área de preparación, pero manteniendo esos cambios en tu directorio de trabajo.
+
+
+# Clase 2
+# Ramas, merge y conflictos
+
+## ¿Qué es una rama?
+
+Una rama en Git es una línea independiente de desarrollo. Te permite trabajar en diferentes versiones de tu proyecto simultáneamente, sin interferir con el trabajo en otras ramas. Es como trabajar en diferentes tareas de tu proyecto al mismo tiempo, manteniendo cada tarea separada hasta que estén listas para combinarse.
+
+### ¿Para qué sirven las ramas?
+
+Permiten realizar un desarrollo no lineal y colaborativo.
+[![R.png](https://i.postimg.cc/RZJfwqKt/R.png)](https://postimg.cc/21mVDkHj)
+## Creando nuestra primera rama
+
+El comando `git Branch` nos permite crear, listar eliminar y renombrar ramas. Para movernos a ella, tendremos que usar el comando `git switch`
+
+```git
+# Creamos la rama
+git branch mi-primera-rama
+
+# Cambiamos a la rama mi-primera-rama
+git switch mi-primera-rama
+`````

@@ -101,6 +101,6 @@ Comandos de Git de la clase 1 varios comandos de Git, entre ellos:
 - `git add <archivo>`: Para pasar un archivo al área de staging.
 - `git commit -m "mensaje"`: Para realizar un commit con un mensaje descriptivo.
 - `git log`: Para ver el historial de commits realizados.
-- `git config --global [user.name](http://user.name) "Your name"` Configurar nombre de usuario
+- `git config --global user.name "Your name"` Configurar nombre de usuario
 - `git config --global user.email "email@example.com"` Configurar un email
 - `git restore --staged <archivo>` Se usa para quitar los cambios que has agregado al área de preparación, pero manteniendo esos cambios en tu directorio de trabajo.

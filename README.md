@@ -157,3 +157,46 @@ Al ejecutar el comando `git merge`, se creara un nuevo commit que incluye todos 
 Por que es una buena practica, además que las ramas tiene un propósito único y corto de periodo.
 
 despues d efusionar una rama en otra, es posible querer eliminarla para no dejarla suelta. Para ello puedes usar el comando `git branch` con el parametro `--delete` o, de forma corta `-d`
+```git
+# borramos la rama llamada "mi-primera-rama"
+git branch --delete mi-primera-rama
+`````
+Si hay el caso de querer borrar una rama que no ha sido fusionada previamente, se debe usar el parámetro `-D` . Este parámetro le indica a Git que borrara la rama sin importar si ha sido fusionada o no.
+```git
+#borramos la rama llamada "mi-primera-rama"
+git branch -D mi-primera-rama
+`````
+## Conflictos en Git
+
+¿Qué pasa si al querer fusionar dos ramas, la de destino ha realizado cambios en las mismas líneas de un fichero que los que queremos fusionar?
+
+Generan conflictos
+
+### Resolviendo conflictos
+
+Al resolver, deberemos decidir entre:
+
+- Nos quedamos con los cambios de la *rama main.*
+- Nos quedamos con los cambios que vienen de la *rama changes*.
+- Modificamos los cambios para hacer una fusión personalizada.
+[![Captura-de-pantalla-2024-05-11-185126.png](https://i.postimg.cc/s26mSFSX/Captura-de-pantalla-2024-05-11-185126.png)](https://postimg.cc/cK3fybFy)
+### Comandos
+
+En el video de la clase 2 se mencionaron los siguientes comandos de Git:
+
+- `git Branch`: Permite crear, listar, eliminar y renombrar ramas.
+    - `git branch <nombre de rama>`
+    - `git branch -a`
+    - `git brach -d <nombre de rama>`
+- `git switch`: Se utiliza para cambiar de rama.
+    - `git switch <nombre de rama>`
+- `git checkout`: También se utiliza para cambiar de rama.
+    - `git checkout <nombre de rama>`
+- `git merge`: Para incorporar los cambios de una rama a la rama en la que nos encontramos.
+    - `git merge <nombre de rama>`
+    - `git merge <nombre de rama> --no-f`
+- `git push`: Para enviar los cambios confirmados a un repositorio remoto.
+- `git log`: Para ver el historial de confirmaciones.
+- `git log --oneline`: Para ver el historial de confirmaciones de forma resumida.
+- `git log --graph`: Para visualizar el historial de confirmaciones en forma de grafo.
+- `git log --graph --oneline`: Para visualizar el historial de confirmaciones en forma de grafo de una línea.

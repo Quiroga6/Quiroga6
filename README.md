@@ -121,7 +121,7 @@ Permiten realizar un desarrollo no lineal y colaborativo.
 
 El comando `git Branch` nos permite crear, listar eliminar y renombrar ramas. Para movernos a ella, tendremos que usar el comando `git switch`
 
-```git
+```bash
 # Creamos la rama
 git branch mi-primera-rama
 
@@ -143,7 +143,7 @@ Cuando hablamos de fusión nos referimos que los cambios que hemos realizado en 
 
 Empleamos el comando `git merge` para incorporar los cambios de una rama a la rama en la que nos encontramos en ese momento.
 [![R.jpg](https://i.postimg.cc/tJ0gmTPM/R.jpg)](https://postimg.cc/zbj5yqxC)
-```git
+```bash
 # Abrir el editor antes de hacer el commit
 git merge --edit
 
@@ -157,12 +157,12 @@ Al ejecutar el comando `git merge`, se creara un nuevo commit que incluye todos 
 Por que es una buena practica, además que las ramas tiene un propósito único y corto de periodo.
 
 despues d efusionar una rama en otra, es posible querer eliminarla para no dejarla suelta. Para ello puedes usar el comando `git branch` con el parametro `--delete` o, de forma corta `-d`
-```git
+```bash
 # borramos la rama llamada "mi-primera-rama"
 git branch --delete mi-primera-rama
 `````
 Si hay el caso de querer borrar una rama que no ha sido fusionada previamente, se debe usar el parámetro `-D` . Este parámetro le indica a Git que borrara la rama sin importar si ha sido fusionada o no.
-```git
+```bash
 #borramos la rama llamada "mi-primera-rama"
 git branch -D mi-primera-rama
 `````

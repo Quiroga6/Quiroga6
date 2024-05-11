@@ -107,7 +107,7 @@ Comandos de Git de la clase 1 varios comandos de Git, entre ellos:
 
 
 # Clase 2
-# Ramas, merge y conflictos
+## Ramas, merge y conflictos
 
 ## ¿Qué es una rama?
 
@@ -142,3 +142,18 @@ Cuando hablamos de fusión nos referimos que los cambios que hemos realizado en 
 ### Fusinando ramas
 
 Empleamos el comando `git merge` para incorporar los cambios de una rama a la rama en la que nos encontramos en ese momento.
+[![R.jpg](https://i.postimg.cc/tJ0gmTPM/R.jpg)](https://postimg.cc/zbj5yqxC)
+```git
+# Abrir el editor antes de hacer el commit
+git merge --edit
+
+# Evitar commit automaticamente
+git merge --no-commit
+`````
+Al ejecutar el comando `git merge`, se creara un nuevo commit que incluye todos los cambios de la rama origen a la rama en la que nos encontramos ahora.
+
+## Eliminar ramas ¿por qué?
+
+Por que es una buena practica, además que las ramas tiene un propósito único y corto de periodo.
+
+despues d efusionar una rama en otra, es posible querer eliminarla para no dejarla suelta. Para ello puedes usar el comando `git branch` con el parametro `--delete` o, de forma corta `-d`

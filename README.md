@@ -563,3 +563,12 @@ Git te permite crear tu propio alias facilmente para comandos que usas habitualm
 `git bisect bad`
 `git bisect good`
 `git bisect reset`
+### Cambiar el nombre de un commit
+
+`git commit --ammend -m <descripcion commit>`
+
+### Recuperar un archivo en concreto de otra rama o commit
+
+`git checkout <SHA> <archivo>`
+
+Fin.

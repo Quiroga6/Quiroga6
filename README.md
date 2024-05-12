@@ -487,3 +487,60 @@ Nos permite recuperar código especifico de commits. Te permite cambiar entre di
 
 - `git checkout HEAD~<N>`Te permite volver al estado del proyecto en un commit específico anterior a los últimos N commits.
 - `git checkout <SHA>`Te permite moverte a un commit específico identificado por su hash `<SHA>`.
+
+# Clase 8
+
+# Hooks, Alias y Trucos de Git
+
+## ¿Qué es un Hook?
+
+- Un hook, o un punto de enganche, es la posibilidad de ejecutar una acción o script cada vez que ocurre un evento determinado de Git.
+- Hooks del lado del cliente
+- Hooks del lado del servidor
+
+## Hooks del lado del cliente
+
+Sólo afectan al repositorio local que los contiene.
+
+- **pre-commit**
+    - Podrías comprobar si se esta intentando hacer un commit de demasiados archivos.
+    - Puede ser un buen sitio para ejecutar el linter sobre los archivos que han sido modificados.
+- **prepare-commit-msg**
+    - Para modificar el mensaje del commit o añadir cualquier información extra.
+- **commit-msg**
+    - Es el sitio perfecto para hacer todas las comprobaciones pertinentes del mensaje
+- **post-commit**
+    - Su uso principal es la de notificar por Slack
+- **pre-push**
+    - Para ejecutar una bateria de test
+- **post-checkout y post-merge**
+    - Permite limpiar el directorio de trabajo, tras realizar un checkout, o el de limpiar las ramas que ya no se usan tras realizar un merge.
+
+## Hooks del lado del servidor
+
+- **pre-receive**
+    - Para comprobar que los commits que se quiere guardar estan bien formados.
+    - Verificar que el usuario que intenta grabar los commits tiene los permisos necesarios para hacerlo
+- **update**
+    - Puedes evitar de una forma granular cada actualizacion
+- **post-receive**
+    - Enviar un correo a todos los usuarios del repositorio que se han grabado nuevos cambios en el repositorio remoto
+    - Reflejar un una UI las nuevas referencias, ramas o commits disponibles.
+
+## Creando un hook
+
+Para crear un propio hook solo se tiene que crear un archivo nuevo nombre-del-hook en la carpeta .git/hooks y en el poner el código que quieras que se ejecute
+
+Puedes usar todo tipo de interpretes de lenguaje de programación como bash, node, python, perl, etc.
+
+## ¿Qué es un Alias?
+
+- Los alias permiten definir una serie de comandos que pueden ser usados en lugar de los nombre completos.
+
+[![Captura-de-pantalla-2024-05-11-235015.png](https://i.postimg.cc/B64FFyVy/Captura-de-pantalla-2024-05-11-235015.png)](https://postimg.cc/LqQhKyRB)
+
+## Creando mi primer alias
+
+Git te permite crear tu propio alias facilmente para comandos que usas habitualmente en tu proyecto con este sistema de control de versiones.
+
+`git  config --global alias.[nombre-del-alias] "comando a ejecutar"`

@@ -549,8 +549,8 @@ Git te permite crear tu propio alias facilmente para comandos que usas habitualm
 ### Guarda tus cambios temporalmente
 
 `git stash`
-`git stash -u
-git stash pop`
+`git stash -u`
+`git stash pop`
 
 ### Aplicar cambios de commits en especifico
 
@@ -559,7 +559,7 @@ git stash pop`
 ### Detectar qué commit es el que ha introducido un bug
 
 `git bisect`
-`git bisect start
-git bisect bad
-git bisect good
-git bisect reset`
+`git bisect start`
+`git bisect bad`
+`git bisect good`
+`git bisect reset`

@@ -544,3 +544,22 @@ Puedes usar todo tipo de interpretes de lenguaje de programación como bash, nod
 Git te permite crear tu propio alias facilmente para comandos que usas habitualmente en tu proyecto con este sistema de control de versiones.
 
 `git  config --global alias.[nombre-del-alias] "comando a ejecutar"`
+## Trucos en Git
+
+### Guarda tus cambios temporalmente
+
+`git stash`
+`git stash -u
+git stash pop`
+
+### Aplicar cambios de commits en especifico
+
+`git cherry-pick <SHA>`
+
+### Detectar qué commit es el que ha introducido un bug
+
+`git bisect`
+`git bisect start
+git bisect bad
+git bisect good
+git bisect reset`

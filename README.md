@@ -331,7 +331,9 @@ Una Pull Request o **PR**, es una petición de cambios que se envía al reposito
 Tenemos que subir nuestra rama con **`git push`** y hay dos maneras diferentes:
 
 1. La rama la subiste recientemente y aparece la opción en GitHub
-> Code
+
+    `>Code`
+
 2. Irnos al apartado Pull Request
 
 ## Hacer una buena PR
@@ -344,3 +346,55 @@ Tenemos que subir nuestra rama con **`git push`** y hay dos maneras diferentes:
 1. Proporciona siempre feedback positivo
 2. concreción y claridad
 3. **Entiende el contexto**, es posible que a veces tengamos que poner paños calientes o parches a nuestro código y que, pese a no ser el más bonito, sí que cumpla su cometido.
+
+# Clase 5
+# GitFlow
+
+## Que es GitFlow?
+
+Es el flujode trabajo mas antiguo, utiliza las ramas:
+1.- main (o master): contener el codigo de produccion.
+2.- develop: Código de preproducción que todavía tienen que ser probadas y validadas.
+[![5e7444cb6b-1458190973507-jpg.png](https://i.postimg.cc/8zJg1vFj/5e7444cb6b-1458190973507-jpg.png)](https://postimg.cc/87S04jmS)
+# Git Flow
+
+1. Feature: caracteristicas nuevas para el proyecto
+2. Release: Cambios de ultimo momento
+3. Hotfix: Parches o arreglar bugs pequeños
+
+https://github.com/OpherV/gitflow4idea/branches/all
+
+Rama main y cualquier otra rama que quiera ser integrada por medio de una Pull Request
+
+[![Captura-de-pantalla-2024-05-07-212235.png](https://i.postimg.cc/LXyxYywR/Captura-de-pantalla-2024-05-07-212235.png)](https://postimg.cc/JDkNSQRd)
+
+## Trunk Based Development
+
+Solo la *rama main* y ramas auxiliares efímeras que quiera ser integrada por medio de una Pull Request.
+Es util si contamos con un buen Sistema CI/CD
+
+[![Captura-de-pantalla-2024-05-07-212529.png](https://i.postimg.cc/dtCgpYgy/Captura-de-pantalla-2024-05-07-212529.png)](https://postimg.cc/RNMPJjSS)
+
+## Ship / Show / Ask
+
+1. Ship: Se fusiona en la rama principal sin revisión
+2. Show: Abre una petición de cambios para que sean revisados por CI pero se fusiona inmediatamente
+3. Ask: Abre un PR para discutir los cambios antes de fusionarlos
+
+[![Captura-de-pantalla-2024-05-11-221916.png](https://i.postimg.cc/J0kYfNYL/Captura-de-pantalla-2024-05-11-221916.png)](https://postimg.cc/BPJCDKGY)
+
+## Las reglas de Ship / Show / Ask
+
+1. Tenemos un buen sistema de CI/CD
+2. Confiamos en el equipo y existen buenas practicas de desarrollo. Pair programming, mob programming, seniority… y, sobre todo, existe responsabilidad. La persona se responsabiliza de decidir la categoría de su cambio.
+3. Las revisiones de código no son requerimientos.
+4. Las ramas son lo mas pequeñas posibles, tienen un tiempo de vida corto y siempre salen directamente desde la rama principal.
+5. EL equipo ha sabido lidiar con el ego individual, las personas confían en el resto del equipo y las pruebas automáticas pasan.
+
+### Show
+
+https://github.com/CodeMasterChefs/Backend-Ruta_del_Programador/pull/3
+
+### Ask
+
+[https://github.com/CodeMasterChefs/Bakend-Ruta_delProgramador/pull/34/commits/1392ca4147fb4d461681f065b90958f09eccb759](https://github.com/CodeMasterChefs/Bakend-Ruta)

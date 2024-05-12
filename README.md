@@ -200,3 +200,37 @@ En el video de la clase 2 se mencionaron los siguientes comandos de Git:
 - `git log --oneline`: Para ver el historial de confirmaciones de forma resumida.
 - `git log --graph`: Para visualizar el historial de confirmaciones en forma de grafo.
 - `git log --graph --oneline`: Para visualizar el historial de confirmaciones en forma de grafo de una línea.
+
+# Clase 3
+# Git y Github
+
+## Enlazar un repositorio local con un repositorio remoto
+
+como alias podemos usar cualquier nombre, por defecto es **origin** para indicar que el repositorio remoto que estamos sincronizando es el principal.
+
+Github utiliza las direcciones SSH por defecto. Por ello debemos utilizar estas, para añadir un repositorio local, se ejecuta el siguiente comando:
+
+`git Remote add origin <URL>`
+
+### Generar Key SSH
+
+- Listamos las llaves SSH que ya tenemos
+    - `ls -al ~/.ssh`
+- Crear key SSH
+    - ssh-keygen -t rsa -b 4096 -C “tu.email@gmail.com”
+    - press enter
+    - passphrase
+- Poner en marcha la key SSH
+    - `eval "$(ssh-agent -s)"`
+- Añadir key SSH
+    - `ssh-add ~/.ssh/id_rsa`
+- Copia en portapapeles
+    - `clip < ~/.ssh/id_rsa.pub`
+- Pegar en la sección “key”
+    - **https://github.com/settings/ssh/new**
+
+## Como forzar un push
+
+El comando **`git push -f`** (o **`git push --force`**) se utiliza para forzar el empuje de tus cambios locales hacia un repositorio remoto, incluso si esto resulta en la pérdida de commits o la reescritura del historial de la rama remota.
+
+- **`git push -f origin main`**

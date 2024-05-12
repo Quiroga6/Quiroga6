@@ -446,3 +446,44 @@ Hacer commit a menudo no significa que debas hacer commits sin sentido.
 [![Captura-de-pantalla-2024-05-11-230606.png](https://i.postimg.cc/GpyhtNfw/Captura-de-pantalla-2024-05-11-230606.png)](https://postimg.cc/kV7dhj9f)
 
 - Usa los IDs de JIRA o el sistema de tickets que uses
+
+# Clase 7
+# Deshacer cambios
+
+## ¿En qué casos deshacer cambios?
+
+- Dejo de funcionar el proyecto.
+- Queremos recuperar una parte del código que eliminamos.
+- Queremos recuperar archivos que eliminamos.
+
+## Comandos destructivos y no destructivos
+
+Los comandos destructivos afectan el historial de commits realizado, sin embargo los comandos no destructivos trabajan en base al historial sin afectarlo.
+
+### git reset
+
+posee 2 opciones
+
+- **soft**: Mantiene los cambios que ocurrieron antes de hacer commit desde donde apuntaba.
+    - **`git reset --soft`**. Este comando se utiliza para deshacer cambios en el área de preparación (index) mientras se mantienen los cambios en el directorio de trabajo.
+    - **`git reset --soft HEAD~<N>`** Deshace los últimos N commits sin borrar los cambios en tus archivos.
+    - **`git reset --soft <SHA>`** Deshace cambios hasta un commit específico sin eliminar los cambios en tus archivos, dejándolos listos para ser confirmados nuevamente.
+- **hard**: Descartar los cambios
+    - **`git reset --hard`** se utiliza para deshacer los cambios en el directorio de trabajo y en el área de preparación (index), restableciendo el árbol de trabajo al estado del último commit. Esto significa que todos los cambios que no hayan sido confirmados se perderán permanentemente.
+    - **`git reset --hard HEAD~<N>`** Deshace los últimos N commits y borra los cambios en tus archivos, restaurando el árbol de trabajo al estado en el que estaba antes de esos commits.
+    - **`git reset --hard <SHA>`**Borras la historia de tu repositorio hasta un punto específico, como si usaras un borrador para retroceder y eliminar todo lo que ocurrió después de ese punto.
+
+### git revert
+
+Revierte los cambios que un commit introdujo, y crea un nuevo commit con los cambios revertidos.
+
+- **`git revert <hash_del_commit>`** Se utiliza para deshacer cambios específicos realizados en un commit anterior creando un nuevo commit que revierte esos cambios. Es seguro de usar en repositorios compartidos porque no modifica la historia existente; en su lugar, crea un nuevo commit que deshace los cambios.
+    - `git revert HEAD~<N>`Deshace los últimos N commits de manera segura, creando nuevos commits que revierten los cambios introducidos en esos commits específicos.
+    - `git revert <SHA>` Deshace los cambios introducidos en un commit específico identificado por el hash `<SHA>`, creando un nuevo commit que revierte esos cambios.
+
+### git checkout
+
+Nos permite recuperar código especifico de commits. Te permite cambiar entre diferentes ramas, moverte hacia atrás y hacia adelante en la historia del repositorio, y deshacer cambios en tus archivos.
+
+- `git checkout HEAD~<N>`Te permite volver al estado del proyecto en un commit específico anterior a los últimos N commits.
+- `git checkout <SHA>`Te permite moverte a un commit específico identificado por su hash `<SHA>`.
